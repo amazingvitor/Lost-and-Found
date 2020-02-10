@@ -14,6 +14,8 @@ struct CardView: View {
     var title: String
     var picture: String
     var profilePic: String
+    var lfColor: UIColor
+    var buttonDesc: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -37,10 +39,15 @@ struct CardView: View {
             Divider()
             
             // MARK: Item Pic
-                        Image(self.picture)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                            .cornerRadius(10) 
+            NavigationLink(destination: Text("eta son card")) {
+                Image(self.picture)
+                    .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(10)
+                
+                
+            }
             
             Divider()
             
@@ -59,7 +66,7 @@ struct CardView: View {
             
             // MARK: More info button
             NavigationLink(destination: Text("eta son")) {
-                Text("See More")
+                Text(buttonDesc)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .frame(height: 50)
                     .foregroundColor(.white)
@@ -72,13 +79,19 @@ struct CardView: View {
         .padding()
         .cornerRadius(10)
             // MARK: Card Format
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(.secondarySystemFill), lineWidth: 1)
-            
+            .overlay(
+                
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color(lfColor), lineWidth: 2)
         )
             .padding([.bottom, .horizontal])
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 4)
+        
+        
+        
+        
+        
+        
     }
     // TODO: More info logic
     func logic() {
@@ -87,6 +100,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(name: "Vitor Hugo", title: "Hotwheels car", picture: "toy", profilePic: "vitor")
+        CardView(name: "Vitor Hugo", title: "Hotwheels car", picture: "toy", profilePic: "vitor", lfColor: .green, buttonDesc: "I lost")
     } // Profile_Previews
 } // PreviewProvider

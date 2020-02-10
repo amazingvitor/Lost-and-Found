@@ -41,3 +41,8 @@ TODO: More/MoreView.swift
 //        }
 
 
+.alert(isPresented: self.$showingAlert) {
+    Alert(title: Text("wen eta"), message: Text("son"), dismissButton: .default(Text("yay"))
+)}
+
+

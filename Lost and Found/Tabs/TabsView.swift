@@ -24,7 +24,7 @@ struct TabsView: View {
                     Image(systemName: "tray").font(.headline)
                     Text("Itens")
             }
-            ItensView()
+            AddView()
                 .tabItem {
                     Image(systemName: "plus.circle").font(.title)
                     Text("Add")

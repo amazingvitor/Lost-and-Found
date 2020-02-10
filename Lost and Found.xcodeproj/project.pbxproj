@@ -28,6 +28,7 @@
 		7B25D60B23E38E8900177FA5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B25D60A23E38E8900177FA5 /* Profile.swift */; };
 		7B2A554B23E4F3DF00A1C373 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A554A23E4F3DF00A1C373 /* KeyboardObserver.swift */; };
 		7B2A554D23E4F5E200A1C373 /* idk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7B2A554C23E4F5E200A1C373 /* idk.txt */; };
+		7B3C56BB23F1C4FE00169F5E /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C56B923F1BA7F00169F5E /* AddView.swift */; };
 		7B58292323E3CFF4001E2612 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B58292223E3CFF4001E2612 /* LoginView.swift */; };
 		7BEB3E1123E9D53200B1168C /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB3E1023E9D53200B1168C /* SessionStore.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +46,6 @@
 		7B00382323E3645300BA9202 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		7B00382523E3645C00BA9202 /* ItensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItensView.swift; sourceTree = "<group>"; };
 		7B00382723E3646400BA9202 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
-		7B00382B23E364EC00BA9202 /* PlusAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusAction.swift; sourceTree = "<group>"; };
 		7B05038723F04E90000E6E84 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7B05038923F0A070000E6E84 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		7B05038B23F0A99C000E6E84 /* CardMini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMini.swift; sourceTree = "<group>"; };
@@ -56,6 +56,7 @@
 		7B25D60A23E38E8900177FA5 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7B2A554A23E4F3DF00A1C373 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		7B2A554C23E4F5E200A1C373 /* idk.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = idk.txt; sourceTree = "<group>"; };
+		7B3C56B923F1BA7F00169F5E /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		7B58292223E3CFF4001E2612 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7BEB3E1023E9D53200B1168C /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		BA530271147BCD6265601D6D /* Pods-Lost and Found.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lost and Found.debug.xcconfig"; path = "Target Support Files/Pods-Lost and Found/Pods-Lost and Found.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,7 +177,7 @@
 		7B00382A23E364D300BA9202 /* PlusMenu */ = {
 			isa = PBXGroup;
 			children = (
-				7B00382B23E364EC00BA9202 /* PlusAction.swift */,
+				7B3C56B923F1BA7F00169F5E /* AddView.swift */,
 			);
 			path = PlusMenu;
 			sourceTree = "<group>";
@@ -356,6 +357,7 @@
 			files = (
 				7B05038C23F0A99C000E6E84 /* CardMini.swift in Sources */,
 				7B05038823F04E90000E6E84 /* CardView.swift in Sources */,
+				7B3C56BB23F1C4FE00169F5E /* AddView.swift in Sources */,
 				7BEB3E1123E9D53200B1168C /* SessionStore.swift in Sources */,
 				7B05038A23F0A070000E6E84 /* TopBar.swift in Sources */,
 				7B1636D523E4923000124CD5 /* RegisterView.swift in Sources */,

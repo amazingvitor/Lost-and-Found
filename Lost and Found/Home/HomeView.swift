@@ -26,6 +26,7 @@ struct HomeView: View {
                             ForEach(0 ..< 5) { item in
                                 CardMini()
                                     .frame(maxWidth: .infinity, alignment: .leading)
+                                .frame(width: 175, height: 125)
                                     .padding(.leading)
                                     .padding(.bottom)
                             }
@@ -40,8 +41,8 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                 
-                CardView(name: "Vitor", title: "do u like my car", picture: "toy", profilePic: "vitor")
-                CardView(name: "Vitor", title: "do u like my car", picture: "toy", profilePic: "vitor")
+                CardView(name: "Vitor", title: "do you like my car", picture: "toy", profilePic: "vitor", lfColor: .green, buttonDesc: "I Lost")
+                CardView(name: "Algum nome feminino", title: "she looks like fun", picture: "headset", profilePic: "girl2", lfColor: .red, buttonDesc: "I Found")
             }
                 // Navbar modifiers
                 .navigationBarTitle("Feed")
