@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>980544397413-uu60ogvjnme8couealmuk7iqiejbprok.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.980544397413-uu60ogvjnme8couealmuk7iqiejbprok</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBEbiD66RXAg_XpcuTdyBZ-YROTC7-uCzs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>980544397413</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.github.amazingvitor.Lost-and-Found</string>
+	<key>PROJECT_ID</key>
+	<string>lost-and-found-af335</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lost-and-found-af335.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:980544397413:ios:ce10f1136ecbfca114a68c</string>
+	<key>DATABASE_URL</key>
+	<string>https://lost-and-found-af335.firebaseio.com</string>
+</dict>
+</plist>
