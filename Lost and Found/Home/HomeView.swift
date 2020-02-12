@@ -41,8 +41,9 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                 
-                CardView(name: "Vitor", title: "do you like my car", picture: "toy", profilePic: "vitor", lfColor: .green, buttonDesc: "I Lost")
-                CardView(name: "Algum nome feminino", title: "she looks like fun", picture: "headset", profilePic: "girl2", lfColor: .red, buttonDesc: "I Found")
+                Teste(category: .red, itemPic: "bear", itemName: "Bear", userName: "Amazingvitor")
+                Teste(category: .green, itemPic: "toy", itemName: "Bear", userName: "Amazingvitor")
+                Teste(category: .red, itemPic: "girl1", itemName: "Bear", userName: "Amazingvitor")
             }
                 // Navbar modifiers
                 .navigationBarTitle("Feed")

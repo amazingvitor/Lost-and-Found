@@ -9,14 +9,20 @@
 import SwiftUI
 
 struct AddView: View {
+    
+    @State var title: String
+    
     var body: some View {
-        ScrollView(.horizontal) {
-            HStack() {
-                ForEach(0 ..< 1) { item in
-                    CardMini()
-                    
-                        .frame(width: UIScreen.main.bounds.width, height: 20)
-                    
+        Form {
+            Section {
+                TextField("Title", text: $title)
+                HStack {
+                    Image(systemName: "star")
+                    Text("tba son")
+                }
+                HStack {
+                    Image(systemName: "star")
+                    Text("tba son")
                 }
             }
         }
@@ -25,6 +31,6 @@ struct AddView: View {
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView()
+        AddView(title: "")
     }
 }

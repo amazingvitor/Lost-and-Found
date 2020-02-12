@@ -30,6 +30,7 @@
 		7B2A554D23E4F5E200A1C373 /* idk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7B2A554C23E4F5E200A1C373 /* idk.txt */; };
 		7B3C56BB23F1C4FE00169F5E /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C56B923F1BA7F00169F5E /* AddView.swift */; };
 		7B58292323E3CFF4001E2612 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B58292223E3CFF4001E2612 /* LoginView.swift */; };
+		7B9ED49A23F461D0005B591F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9ED49923F461D0005B591F /* Storyboard.storyboard */; };
 		7BEB3E1123E9D53200B1168C /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB3E1023E9D53200B1168C /* SessionStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		7B2A554C23E4F5E200A1C373 /* idk.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = idk.txt; sourceTree = "<group>"; };
 		7B3C56B923F1BA7F00169F5E /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		7B58292223E3CFF4001E2612 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7B9ED49923F461D0005B591F /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		7BEB3E1023E9D53200B1168C /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		BA530271147BCD6265601D6D /* Pods-Lost and Found.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lost and Found.debug.xcconfig"; path = "Target Support Files/Pods-Lost and Found/Pods-Lost and Found.debug.xcconfig"; sourceTree = "<group>"; };
 		CFB6E1D8D36DBF2B447686AF /* Pods-Lost and Found.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lost and Found.release.xcconfig"; path = "Target Support Files/Pods-Lost and Found/Pods-Lost and Found.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				7B05038B23F0A99C000E6E84 /* CardMini.swift */,
 				7B2A554A23E4F3DF00A1C373 /* KeyboardObserver.swift */,
 				7B1DDFD923F19193005288F5 /* Teste.swift */,
+				7B9ED49923F461D0005B591F /* Storyboard.storyboard */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				7B00381023E362E800BA9202 /* Preview Assets.xcassets in Resources */,
 				7B00380D23E362E800BA9202 /* Assets.xcassets in Resources */,
 				7B2A554D23E4F5E200A1C373 /* idk.txt in Resources */,
+				7B9ED49A23F461D0005B591F /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

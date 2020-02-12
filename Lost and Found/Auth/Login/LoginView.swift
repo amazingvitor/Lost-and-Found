@@ -45,8 +45,8 @@ struct LoginView: View {
                 .font(.headline)
                 .fontWeight(.regular)
             
-            VStack(spacing: 20) {
-                TextField("Email Address", text: $email)
+            VStack(spacing: 15) {
+                TextField("Email or Username", text: $email)
                     .font(.system(size: 14))
                     .padding(12)
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
@@ -56,7 +56,7 @@ struct LoginView: View {
                     .padding(12)
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
             }
-            .padding(.vertical, 64)
+            .padding(.vertical, 20)
             
             Button(action: signIn) {
                 Text("Sign in")
@@ -64,7 +64,7 @@ struct LoginView: View {
                     .frame(height: 50)
                     .foregroundColor(.white)
                     .font(.system(size: 14))
-                    .background(Color(UIColor(red:0.61, green:0.15, blue:0.69, alpha:1.0)))
+                    .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
                     .cornerRadius(10)
             }
             
@@ -74,6 +74,42 @@ struct LoginView: View {
                     .foregroundColor(.red)
                     .padding()
             }
+            
+            Text("or")
+                .font(.headline)
+                .fontWeight(.regular)
+                .padding(.bottom)
+            
+            HStack {
+                Button(action: signIn) {
+                    Text("Facebook")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .frame(height: 50)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
+                        .cornerRadius(10)
+                }
+                Button(action: signIn) {
+                    Text("Google")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .frame(height: 50)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
+                        .cornerRadius(10)
+                }
+                Button(action: signIn) {
+                    Text("Apple")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .frame(height: 50)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
+                        .cornerRadius(10)
+                }
+            }
+            
             Spacer()
             
             HStack {
@@ -84,7 +120,7 @@ struct LoginView: View {
                     Text("Create an account")
                         .font(.headline)
                         .fontWeight(.regular)
-                        .foregroundColor(Color(UIColor(red:0.61, green:0.15, blue:0.69, alpha:1.0)))
+                        .foregroundColor(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
                 }
                 
             }

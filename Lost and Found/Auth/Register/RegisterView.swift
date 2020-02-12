@@ -10,9 +10,7 @@ import SwiftUI
 
 struct RegisterView: View {
     @EnvironmentObject var session: SessionStore
-    
-    @State var firstName: String = ""
-    @State var lastName: String = ""
+    @State var userName: String = ""
     @State var email: String = ""
     @State var password: String = ""
     @State var error: String = ""
@@ -38,13 +36,9 @@ struct RegisterView: View {
                 .font(.headline)
                 .fontWeight(.regular)
             
-            VStack(spacing: 20) {
-                TextField("First Name", text: $firstName)
-                    .font(.system(size: 14))
-                    .padding(12)
-                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
+            VStack(spacing: 15) {
                 
-                TextField("Last Name", text: $lastName)
+                TextField("@username", text: $userName)
                     .font(.system(size: 14))
                     .padding(12)
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
@@ -59,7 +53,8 @@ struct RegisterView: View {
                     .padding(12)
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
             }
-            .padding(.vertical, 64)
+            .padding(.vertical, 20)
+            
             
             Button(action: signUp) {
                 Text("Sign up")
@@ -67,18 +62,60 @@ struct RegisterView: View {
                     .frame(height: 50)
                     .foregroundColor(.white)
                     .font(.system(size: 14))
-                    .background(Color(UIColor(red:0.61, green:0.15, blue:0.69, alpha:1.0)))
+                    .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
                     .cornerRadius(10)
             }
             
-            if error != "heklkl" {
+            if error == "" {
                 Text(error)
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(.red)
-                    .padding()
+                .hidden()
+            } else {
+                Text(error)
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundColor(.red)
+                .padding()
             }
-            Spacer()
             
+            HStack {
+                line
+                Text("or")
+                    .font(.headline)
+                    .fontWeight(.regular)
+                line
+            }
+            .padding()
+            
+            HStack {
+                Button(action: signUp) {
+                    Text("Facebook")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .frame(height: 50)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
+                        .cornerRadius(10)
+                }
+                Button(action: signUp) {
+                    Text("Google")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .frame(height: 50)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
+                        .cornerRadius(10)
+                }
+                Button(action: signUp) {
+                    Text("Apple")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .frame(height: 50)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
+                        .cornerRadius(10)
+                }
+            }
+            
+            Spacer()
             HStack {
                 Text("I already have an account.")
                     .font(.headline)
@@ -87,7 +124,7 @@ struct RegisterView: View {
                     Text("Sign in")
                         .font(.headline)
                         .fontWeight(.regular)
-                        .foregroundColor(Color(UIColor(red:0.61, green:0.15, blue:0.69, alpha:1.0)))
+                        .foregroundColor(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
                 }
                 
             }
@@ -97,8 +134,13 @@ struct RegisterView: View {
         .padding(.top, 50)
         .padding(.bottom, 20)
     }
+    
+    var line: some View {
+        VStack { Divider()
+            .padding()
+        }
+    }
 }
-
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
