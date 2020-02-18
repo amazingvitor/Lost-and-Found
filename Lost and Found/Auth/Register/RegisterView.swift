@@ -9,22 +9,14 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @EnvironmentObject var session: SessionStore
     @State var userName: String = ""
     @State var email: String = ""
     @State var password: String = ""
     @State var error: String = ""
     
     func signUp() {
-        session.signUp(email: email, password: password) { (result, error) in
-            if let error = error {
-                self.error = error.localizedDescription
-            } else {
-                self.email = ""
-                self.password = ""
-            }
-        }
     }
+    
     var body: some View {
         
         VStack {
@@ -39,6 +31,16 @@ struct RegisterView: View {
             VStack(spacing: 15) {
                 
                 TextField("@username", text: $userName)
+                    .font(.system(size: 14))
+                    .padding(12)
+                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
+                
+                TextField("First Name", text: $email)
+                    .font(.system(size: 14))
+                    .padding(12)
+                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
+                
+                TextField("Last Name", text: $email)
                     .font(.system(size: 14))
                     .padding(12)
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
@@ -68,51 +70,12 @@ struct RegisterView: View {
             
             if error == "" {
                 Text(error)
-                .hidden()
+                    .hidden()
             } else {
                 Text(error)
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundColor(.red)
-                .padding()
-            }
-            
-            HStack {
-                line
-                Text("or")
-                    .font(.headline)
-                    .fontWeight(.regular)
-                line
-            }
-            .padding()
-            
-            HStack {
-                Button(action: signUp) {
-                    Text("Facebook")
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .frame(height: 50)
-                        .foregroundColor(.white)
-                        .font(.system(size: 14))
-                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
-                        .cornerRadius(10)
-                }
-                Button(action: signUp) {
-                    Text("Google")
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .frame(height: 50)
-                        .foregroundColor(.white)
-                        .font(.system(size: 14))
-                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
-                        .cornerRadius(10)
-                }
-                Button(action: signUp) {
-                    Text("Apple")
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .frame(height: 50)
-                        .foregroundColor(.white)
-                        .font(.system(size: 14))
-                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
-                        .cornerRadius(10)
-                }
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(.red)
+                    .padding()
             }
             
             Spacer()
@@ -120,7 +83,7 @@ struct RegisterView: View {
                 Text("I already have an account.")
                     .font(.headline)
                     .fontWeight(.regular)
-                NavigationLink(destination: MoreView()) {
+                NavigationLink(destination: LoginView()) {
                     Text("Sign in")
                         .font(.headline)
                         .fontWeight(.regular)
@@ -133,6 +96,9 @@ struct RegisterView: View {
         .padding(.horizontal, 30)
         .padding(.top, 50)
         .padding(.bottom, 20)
+            
+            // Navbar modifiers
+            .navigationBarTitle("Back")
     }
     
     var line: some View {

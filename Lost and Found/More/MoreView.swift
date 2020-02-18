@@ -39,55 +39,62 @@ struct MoreView: View {
                 Section {
                     NavigationLink(destination: Text("Coming Soon")) {
                         HStack {
-                            Image(systemName: "star")
+                            IconLayout(iconImage: "star", rectangleFill: .systemGreen)
                             Text("Valuable Itens")
                         }
                     }
+                    
                     HStack {
-                        Image(systemName: "star")
-                        Text("tba son")
+                        IconLayout(iconImage: "star", rectangleFill: .systemOrange)
+                        Text("eta son")
                     }
+                    
                     HStack {
-                        Image(systemName: "star")
-                        Text("tba son")
+                        IconLayout(iconImage: "star", rectangleFill: .systemOrange)
+                        Text("eta son")
                     }
                 }
                 Section {
                     NavigationLink(destination: Text("Coming Soon")) {
                         HStack {
-                            Image(systemName: "bell")
+                            IconLayout(iconImage: "bell", rectangleFill: .systemBlue)
                             Text("Notifications")
                         }
                     }
+                    
                     HStack {
-                        Image(systemName: "star")
-                        Text("tba son")
+                        IconLayout(iconImage: "lock", rectangleFill: .gray)
+                        Text("Privacy and Security")
                     }
+                    
                     HStack {
-                        Image(systemName: "star")
-                        Text("tba son")
+                        IconLayout(iconImage: "globe", rectangleFill: .orange)
+                        Text("Language")
                     }
+                    
                     HStack {
-                        Image(systemName: "star")
-                        Text("tba son")
+                        IconLayout(iconImage: "star", rectangleFill: .systemPink)
+                        Text("eta son")
                     }
+                    
                     HStack {
-                        Image(systemName: "star")
-                        Text("tba son")
+                        IconLayout(iconImage: "star", rectangleFill: .systemPink)
+                        Text("eta son")
                     }
                 }
                 
                 Section {
                     NavigationLink(destination: Text("Coming Soon")) {
                         HStack {
-                            Image(systemName: "questionmark")
-                            Text("Help")
+                            IconLayout(iconImage: "heart", rectangleFill: .systemRed)
+                            Text("Tell a Friend")
                         }
                     }
+                    
                     NavigationLink(destination: Text("Coming Soon")) {
                         HStack {
-                            Image(systemName: "person.badge.minus")
-                            Text("Logout")
+                            IconLayout(iconImage: "info", rectangleFill: .systemBlue)
+                            Text("Help")
                         }
                     }
                 }
@@ -101,3 +108,5 @@ struct MoreView: View {
         }
     }
 }
+
+

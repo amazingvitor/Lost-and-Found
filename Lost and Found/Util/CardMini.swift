@@ -8,12 +8,16 @@
 
 import SwiftUI
 
+// REMEMBER TO DECLARE THE .frame TO IMPLEMENT
 struct CardMini: View {
     var body: some View {
-        // MARK: Recent Card
+        // MARK: Navigation to detail screen
         NavigationLink(destination: Text("eta son")) {
+            // MARK: Card Format
             RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Color(UIColor(red:0.61, green:0.15, blue:0.69, alpha:1.0)))
+                .foregroundColor(Color.defaultColor)
         }
     }
 }
+
+

@@ -12,44 +12,22 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView {
+                
                 // MARK: Search and filter
                 TopBar()
-                // MARK: Recent Section
-                VStack {
-                    Text("Recent")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal)
-                    ScrollView(.horizontal) {
-                        HStack {
-                            ForEach(0 ..< 5) { item in
-                                CardMini()
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                .frame(width: 175, height: 125)
-                                    .padding(.leading)
-                                    .padding(.bottom)
-                            }
-                        }
-                    }
-                    .frame(height: 150)
-                }
+                
                 // MARK: New Itens Section
                 Text("New Itens")
                     .font(.title)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
-                
-                Teste(category: .red, itemPic: "bear", itemName: "Bear", userName: "Amazingvitor")
-                Teste(category: .green, itemPic: "toy", itemName: "Bear", userName: "Amazingvitor")
-                Teste(category: .red, itemPic: "girl1", itemName: "Bear", userName: "Amazingvitor")
+                CardView(itemPic: "toy", itemName: "HotWheels", itemTime: "1 Hour ago", itemUser: "Amazingvitor", stateType: "Found", stateColor: .systemGreen)
+                CardView(itemPic: "bear", itemName: "Toy Bear", itemTime: "10 Minutes ago", itemUser: "Amazingvitor", stateType: "Lost", stateColor: .systemRed)
             }
                 // Navbar modifiers
                 .navigationBarTitle("Feed")
-                .navigationBarHidden(true)
         }
-        
     }
 }
 

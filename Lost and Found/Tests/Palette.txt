@@ -1,0 +1,18 @@
+//
+//  Palette.swift
+//  Lost and Found
+//
+//  Created by Vitor Hugo on 2/13/20.
+//  Copyright © 2020 Vitor Hugo. All rights reserved.
+//
+
+
+
+UIColor(red:0.96, green:0.49, blue:0.00, alpha:1.0) // Dark Primary Color
+
+UIColor(red:1.00, green:0.88, blue:0.70, alpha:1.0) // Light Primary Color
+
+UIColor(red:1.00, green:0.60, blue:0.00, alpha:1.0) // Primary Color
+
+UIColor(red:1.00, green:0.25, blue:0.51, alpha:1.0) // Accent Color
+

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct TopBar: View {
     
@@ -28,11 +29,11 @@ struct TopBar: View {
                     // MARK: Search Button
                     Button(action: searchLogic) {
                         Image(systemName: "magnifyingglass")
-                        .font(Font.system(size: 15).weight(.bold))
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color(UIColor(red:0.61, green:0.15, blue:0.69, alpha:1.0)))
-                        .cornerRadius(10)
+                            .font(Font.system(size: 15).weight(.bold))
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.defaultColor)
+                            .cornerRadius(10)
                     }
                     
                     
@@ -42,11 +43,11 @@ struct TopBar: View {
             // MARK: Filter Button
             Button(action: filterLogic) {
                 Image(systemName: "line.horizontal.3.decrease")
-                .font(Font.system(size: 15).weight(.bold))
-                .padding()
-                .foregroundColor(.white)
-                .background(Color(UIColor(red:0.61, green:0.15, blue:0.69, alpha:1.0)))
-                .cornerRadius(10)
+                    .font(Font.system(size: 15).weight(.bold))
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.defaultColor)
+                    .cornerRadius(10)
             }
             .alert(isPresented: self.$showingAlert) { () -> Alert in
                 Alert.init(title: Text("wen eta"), message: Text("son"), dismissButton: .default(Text("...")))
@@ -58,13 +59,23 @@ struct TopBar: View {
     
     // TODO: Filter
     func filterLogic() {
-        self.showingAlert = true
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            self.showingAlert = true
+            print("Sucesso")
+            print("USERRRRRR: \((Auth.auth().currentUser)!)")
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
     }
     // TODO: Filter
     func searchLogic() {
         
     }
 }
+
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {

@@ -1,8 +1,8 @@
 //
-//  CardView.swift
+//  Teste.swift
 //  Lost and Found
 //
-//  Created by Vitor Hugo on 2/9/20.
+//  Created by Vitor Hugo on 2/10/20.
 //  Copyright © 2020 Vitor Hugo. All rights reserved.
 //
 
@@ -10,96 +10,83 @@ import SwiftUI
 
 struct CardView: View {
     
-    var name: String
-    var title: String
-    var picture: String
-    var profilePic: String
-    var lfColor: UIColor
-    var buttonDesc: String
+    // Item Description
+    @State var itemPic: String
+    @State var itemName: String
+    @State var itemTime: String // Later u have to change to Date
+    @State var itemUser: String
+    // stateType = Lost or Found; stateColor = Red to Lost and Green to Found
+    @State var stateType: String
+    @State var stateColor: UIColor
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            
-            // MARK: Profile Section
-            HStack {
-                CircleImage(image: profilePic)
-                    .frame(width: 50, height: 50)
+        
+        // MARK: Navigation to datail screen
+        NavigationLink(destination: Text("eta son card")) {
+            VStack(alignment: .leading) {
                 
-                VStack(alignment: .leading) {
-                    Text(name)
-                        .font(.headline)
-                    Text("50 minutes ago")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                VStack(spacing: 20) {
                     
+                    // MARK: Item Pic
+                    HStack( spacing: 10) {
+                        Image(self.itemPic)
+                            .resizable()
+                            .cornerRadius(10)
+                            .frame(width: 100, height: 100)
+                        
+                        // MARK: Item Name
+                        VStack(alignment: .leading) {
+                            Text(self.itemName)
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .lineLimit(1)
+                            
+                            // MARK: Item Time
+                            Text(itemTime)
+                                .font(.caption)
+                            
+                            Divider()
+                            
+                            // MARK: Item User
+                            Text("@\(self.itemUser)")
+                                .font(.subheadline)
+                        }
+                    }
                 }
                 
+                // MARK: Item State
+                Text(self.stateType)
+                    .font(.caption)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(stateColor))
+                    .frame(width: 100)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color(stateColor), lineWidth: 2)
+                )
             }
-            
-            Divider()
-            
-            // MARK: Item Pic
-            NavigationLink(destination: Text("eta son card")) {
-                Image(self.picture)
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(10)
+            .padding()
+            .cornerRadius(10)
                 
-                
-            }
-            
-            Divider()
-            
-            // MARK: Item Info
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(title)
-                        .font(.title)
-                        .fontWeight(.medium)
-                        .foregroundColor(.primary)
-                        .lineLimit(3)
-                }
-                .layoutPriority(100)
-                Spacer()
-            }
-            
-            // MARK: More info button
-            NavigationLink(destination: Text("eta son")) {
-                Text(buttonDesc)
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .frame(height: 50)
-                    .foregroundColor(.white)
-                    .font(.system(size: 14))
-                    .background(Color(UIColor(red:0.61, green:0.15, blue:0.69, alpha:1.0)))
-                    .cornerRadius(10)
-                
-            }
+                // MARK: Card Format
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color(.secondarySystemFill), lineWidth: 2)
+            )
+                .padding([.bottom, .horizontal])
+                .shadow(color: Color.black.opacity(0.2), radius: 10)
         }
-        .padding()
-        .cornerRadius(10)
-            // MARK: Card Format
-            .overlay(
-                
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color(lfColor), lineWidth: 2)
-        )
-            .padding([.bottom, .horizontal])
-            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 4)
-        
-        
-        
-        
-        
-        
+        .buttonStyle(PlainButtonStyle())
+    
     }
-    // TODO: More info logic
+    
+    // MARK: TODO: More info logic
     func logic() {
     }
 }
-
+// MARK: SwiftUI Preview
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(name: "Vitor Hugo", title: "Hotwheels car", picture: "toy", profilePic: "vitor", lfColor: .green, buttonDesc: "I lost")
-    } // Profile_Previews
-} // PreviewProvider
+        CardView(itemPic: "toy", itemName: "Hot Wheels", itemTime: "1 hour ago", itemUser: "@Amazingvitor", stateType: "Found", stateColor: .green)
+    }
+}

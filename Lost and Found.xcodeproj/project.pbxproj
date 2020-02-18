@@ -20,7 +20,6 @@
 		7B00382823E3646400BA9202 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B00382723E3646400BA9202 /* MoreView.swift */; };
 		7B05038823F04E90000E6E84 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05038723F04E90000E6E84 /* CardView.swift */; };
 		7B05038A23F0A070000E6E84 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05038923F0A070000E6E84 /* TopBar.swift */; };
-		7B05038C23F0A99C000E6E84 /* CardMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05038B23F0A99C000E6E84 /* CardMini.swift */; };
 		7B1636D523E4923000124CD5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1636D423E4923000124CD5 /* RegisterView.swift */; };
 		7B1636D723E4969B00124CD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B1636D623E4969B00124CD5 /* GoogleService-Info.plist */; };
 		7B1DDFDA23F19193005288F5 /* Teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1DDFD923F19193005288F5 /* Teste.swift */; };
@@ -29,9 +28,15 @@
 		7B2A554B23E4F3DF00A1C373 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A554A23E4F3DF00A1C373 /* KeyboardObserver.swift */; };
 		7B2A554D23E4F5E200A1C373 /* idk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7B2A554C23E4F5E200A1C373 /* idk.txt */; };
 		7B3C56BB23F1C4FE00169F5E /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C56B923F1BA7F00169F5E /* AddView.swift */; };
+		7B3E06AD23F7605900E68367 /* IconLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E06AC23F7605900E68367 /* IconLayout.swift */; };
+		7B42DB4923F9AC0F0052FB3C /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B42DB4823F9AC0F0052FB3C /* test.swift */; };
+		7B42F40423F84D5400FB5182 /* CardMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05038B23F0A99C000E6E84 /* CardMini.swift */; };
 		7B58292323E3CFF4001E2612 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B58292223E3CFF4001E2612 /* LoginView.swift */; };
+		7B5E019C23F9817C00C64C0A /* LoginLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E019B23F9817C00C64C0A /* LoginLogic.swift */; };
+		7B72FBA523F8BB6B0086F93D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B72FBA423F8BB6B0086F93D /* Roboto-Regular.ttf */; };
+		7B8D697A23F62249004232F4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D697923F62249004232F4 /* Colors.swift */; };
 		7B9ED49A23F461D0005B591F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9ED49923F461D0005B591F /* Storyboard.storyboard */; };
-		7BEB3E1123E9D53200B1168C /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB3E1023E9D53200B1168C /* SessionStore.swift */; };
+		7BED8BC623F9ADFF00A6F62D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B40738323F8970E00F4508E /* LandingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,9 +63,15 @@
 		7B2A554A23E4F3DF00A1C373 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		7B2A554C23E4F5E200A1C373 /* idk.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = idk.txt; sourceTree = "<group>"; };
 		7B3C56B923F1BA7F00169F5E /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		7B3E06AC23F7605900E68367 /* IconLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLayout.swift; sourceTree = "<group>"; };
+		7B40738323F8970E00F4508E /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		7B42DB4823F9AC0F0052FB3C /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		7B58292223E3CFF4001E2612 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7B5E019B23F9817C00C64C0A /* LoginLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLogic.swift; sourceTree = "<group>"; };
+		7B72FBA423F8BB6B0086F93D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		7B8D697723F61E80004232F4 /* Palette.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Palette.txt; sourceTree = "<group>"; };
+		7B8D697923F62249004232F4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7B9ED49923F461D0005B591F /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		7BEB3E1023E9D53200B1168C /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		BA530271147BCD6265601D6D /* Pods-Lost and Found.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lost and Found.debug.xcconfig"; path = "Target Support Files/Pods-Lost and Found/Pods-Lost and Found.debug.xcconfig"; sourceTree = "<group>"; };
 		CFB6E1D8D36DBF2B447686AF /* Pods-Lost and Found.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lost and Found.release.xcconfig"; path = "Target Support Files/Pods-Lost and Found/Pods-Lost and Found.release.xcconfig"; sourceTree = "<group>"; };
 		F77B2C2FA4F710D6318CD964 /* Pods_Lost_and_Found.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lost_and_Found.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +110,7 @@
 		7B00380523E362E600BA9202 /* Lost and Found */ = {
 			isa = PBXGroup;
 			children = (
+				7B72FBA323F8BB3B0086F93D /* Fonts */,
 				7B00382923E3646D00BA9202 /* Support Files */,
 				7B00381A23E362F200BA9202 /* Tabs */,
 				7B58291F23E3CFD5001E2612 /* Auth */,
@@ -109,9 +121,9 @@
 				7B00381D23E363B500BA9202 /* Home */,
 				7B2A554923E4F3CC00A1C373 /* Util */,
 				7B00380E23E362E800BA9202 /* Preview Content */,
+				7B4091B923F5845500001687 /* Tests */,
 				7B1636D623E4969B00124CD5 /* GoogleService-Info.plist */,
 				7B00381423E362E800BA9202 /* Info.plist */,
-				7B2A554C23E4F5E200A1C373 /* idk.txt */,
 			);
 			path = "Lost and Found";
 			sourceTree = "<group>";
@@ -187,21 +199,34 @@
 		7B2A554923E4F3CC00A1C373 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				7B25D60623E38E6500177FA5 /* CircleImage.swift */,
-				7B05038723F04E90000E6E84 /* CardView.swift */,
-				7B05038923F0A070000E6E84 /* TopBar.swift */,
 				7B05038B23F0A99C000E6E84 /* CardMini.swift */,
+				7B05038723F04E90000E6E84 /* CardView.swift */,
+				7B25D60623E38E6500177FA5 /* CircleImage.swift */,
+				7B8D697923F62249004232F4 /* Colors.swift */,
+				7B3E06AC23F7605900E68367 /* IconLayout.swift */,
+				7B05038923F0A070000E6E84 /* TopBar.swift */,
 				7B2A554A23E4F3DF00A1C373 /* KeyboardObserver.swift */,
-				7B1DDFD923F19193005288F5 /* Teste.swift */,
-				7B9ED49923F461D0005B591F /* Storyboard.storyboard */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		7B4091B923F5845500001687 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7B1DDFD923F19193005288F5 /* Teste.swift */,
+				7B9ED49923F461D0005B591F /* Storyboard.storyboard */,
+				7B2A554C23E4F5E200A1C373 /* idk.txt */,
+				7B8D697723F61E80004232F4 /* Palette.txt */,
+				7B42DB4823F9AC0F0052FB3C /* test.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		7B58291F23E3CFD5001E2612 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				7BEB3E1023E9D53200B1168C /* SessionStore.swift */,
+				7B40738323F8970E00F4508E /* LandingView.swift */,
+				7B5E019B23F9817C00C64C0A /* LoginLogic.swift */,
 				7B58292123E3CFE6001E2612 /* Register */,
 				7B58292023E3CFE1001E2612 /* Login */,
 			);
@@ -222,6 +247,14 @@
 				7B1636D423E4923000124CD5 /* RegisterView.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		7B72FBA323F8BB3B0086F93D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7B72FBA423F8BB6B0086F93D /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		A409EB0F72F9024FADB2DE0F /* Frameworks */ = {
@@ -253,6 +286,7 @@
 				7B00380023E362E600BA9202 /* Frameworks */,
 				7B00380123E362E600BA9202 /* Resources */,
 				09034B1A36D67591A1961366 /* [CP] Embed Pods Frameworks */,
+				2CE5552653448A0036EB2A5D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B00381323E362E800BA9202 /* LaunchScreen.storyboard in Resources */,
+				7B72FBA523F8BB6B0086F93D /* Roboto-Regular.ttf in Resources */,
 				7B1636D723E4969B00124CD5 /* GoogleService-Info.plist in Resources */,
 				7B00381023E362E800BA9202 /* Preview Assets.xcassets in Resources */,
 				7B00380D23E362E800BA9202 /* Assets.xcassets in Resources */,
@@ -328,6 +363,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lost and Found/Pods-Lost and Found-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CE5552653448A0036EB2A5D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lost and Found/Pods-Lost and Found-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lost and Found/Pods-Lost and Found-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lost and Found/Pods-Lost and Found-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7BAA8390EAA85C537272F7D /* [CP] Check Pods Manifest.lock */ = {
@@ -359,21 +411,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B05038C23F0A99C000E6E84 /* CardMini.swift in Sources */,
 				7B05038823F04E90000E6E84 /* CardView.swift in Sources */,
+				7BED8BC623F9ADFF00A6F62D /* LandingView.swift in Sources */,
 				7B3C56BB23F1C4FE00169F5E /* AddView.swift in Sources */,
-				7BEB3E1123E9D53200B1168C /* SessionStore.swift in Sources */,
 				7B05038A23F0A070000E6E84 /* TopBar.swift in Sources */,
+				7B42F40423F84D5400FB5182 /* CardMini.swift in Sources */,
 				7B1636D523E4923000124CD5 /* RegisterView.swift in Sources */,
 				7B00382823E3646400BA9202 /* MoreView.swift in Sources */,
+				7B42DB4923F9AC0F0052FB3C /* test.swift in Sources */,
 				7B25D60723E38E6500177FA5 /* CircleImage.swift in Sources */,
 				7B00382423E3645300BA9202 /* MessagesView.swift in Sources */,
+				7B3E06AD23F7605900E68367 /* IconLayout.swift in Sources */,
 				7B00380723E362E600BA9202 /* AppDelegate.swift in Sources */,
 				7B00381F23E363BD00BA9202 /* HomeView.swift in Sources */,
 				7B00380923E362E600BA9202 /* SceneDelegate.swift in Sources */,
+				7B8D697A23F62249004232F4 /* Colors.swift in Sources */,
 				7B1DDFDA23F19193005288F5 /* Teste.swift in Sources */,
 				7B00382623E3645C00BA9202 /* ItensView.swift in Sources */,
 				7B25D60B23E38E8900177FA5 /* Profile.swift in Sources */,
+				7B5E019C23F9817C00C64C0A /* LoginLogic.swift in Sources */,
 				7B58292323E3CFF4001E2612 /* LoginView.swift in Sources */,
 				7B2A554B23E4F3DF00A1C373 /* KeyboardObserver.swift in Sources */,
 				7B00381C23E3630500BA9202 /* TabsView.swift in Sources */,

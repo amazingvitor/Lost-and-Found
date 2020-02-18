@@ -1,0 +1,168 @@
+.padding()
+.background(Color.init(red: 0.70, green: 0.92, blue: 0.95, opacity: 1.0))
+.cornerRadius(5.0)
+.padding(.bottom, 20)
+
+
+TODO: More/MoreView.swift
+    profile section without auto-text size
+
+
+
+//        Button(action: {
+//            self.showingDetail.toggle()
+//        }) {
+//            ZStack {
+//                Rectangle()
+//                    .frame(width: UIScreen.main.bounds.width - 50, height: 250)
+//                    .foregroundColor(Color(.secondarySystemBackground))
+//                    .cornerRadius(12)
+//                    .shadow(color: Color.black.opacity(0.4), radius: 8, x: 0, y: 4)
+//
+//                    .frame(width: 450, height: 250)
+//                    .padding(10)
+//
+//                HStack {
+//                    CircleImage()
+//                    .frame(width: 65, height: 65)
+//                    VStack {
+//                        Text("Vitor Hugo")
+//                            .font(.title)
+//                        Text("50 minutes ago")
+//
+//                    }
+//
+//                }
+//
+//            }
+//
+//        }.sheet(isPresented: $showingDetail) {
+//            MoreView()
+//        }
+
+
+.alert(isPresented: self.$showingAlert) {
+    Alert(title: Text("wen eta"), message: Text("son"), dismissButton: .default(Text("yay"))
+)}
+
+
+// Item Description
+@State private var itemPic: String
+@State private var itemName: String
+@State private var itemTime: String
+@State private var itemUser: String
+// stateType = Lost or Found; stateColor = Red to Lost and Green to Found
+@State private var stateType: String
+@State private var stateColor: UIColor
+
+
+
+
+VStack(spacing: 10) {
+    Button(action: signIn) {
+        Text("Sign in")
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .frame(height: 50)
+            .foregroundColor(.white)
+            .font(.system(size: 14))
+            .background(Color(.systemOrange))
+            .cornerRadius(10)
+    }
+    
+    HStack {
+        line
+        Text("or")
+            .foregroundColor(.white)
+            .font(.headline)
+            .fontWeight(.regular)
+        line
+    }
+    .padding()
+    
+    Button(action: signIn) {
+        HStack {
+            Image("googleLogo")
+                .resizable()
+                .renderingMode(.original)
+                .scaledToFit()
+                .frame(width: 25, height: 25)
+                .padding(5)
+            
+            Text("Continue with Google")
+                .font(.custom("Roboto-Regular", size: 15))
+                .frame(width: 175, alignment: .leading)
+        }
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .frame(height: 50)
+        .foregroundColor(.black)
+        .font(.system(size: 14))
+        .background(Color(.white))
+        .cornerRadius(10)
+    }
+    
+    
+    Button(action: signIn) {
+        HStack {
+            Image("facebookLogo")
+                .resizable()
+                .renderingMode(.original)
+                .scaledToFit()
+                .frame(width: 25, height: 25)
+                .padding(5)
+            
+            Text("Continue with Facebook")
+                .frame(width: 175, alignment: .leading)
+            
+        }
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .frame(height: 50)
+        .foregroundColor(.white)
+        .font(.system(size: 14))
+        .background(Color(UIColor(red:0.26, green:0.40, blue:0.70, alpha:1.0)))
+        .cornerRadius(10)
+    }
+    
+    Button(action: signIn) {
+        HStack {
+            Image("appleLogo")
+                .renderingMode(.original)
+                .frame(width: 25, height: 25)
+                .padding(5)
+            
+            Text("Continue with Apple")
+                .frame(width: 175, alignment: .leading)
+            
+        }
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .frame(height: 50)
+        .foregroundColor(.white)
+        .font(.system(size: 14))
+        .background(Color(.black))
+        .cornerRadius(10)
+    }
+}
+
+
+
+//
+//            Image("landing")
+//                .resizable()
+//                .blur(radius: 10, opaque: true)
+//                .edgesIgnoringSafeArea(.all)
+
+
+.frame(minWidth: 0, maxWidth: .infinity)
+.frame(height: 50)
+.foregroundColor(.black)
+.font(.system(size: 14))
+.background(Color(.white))
+.cornerRadius(10)
+
+
+func attemptLoginFb(completion: @escaping (_ result: LoginManagerLoginResult?, _ error: Error?) -> Void) {
+    let fbLoginManager: LoginManager = LoginManager()
+    fbLoginManager.logOut()
+    fbLoginManager.logIn(permissions: ["email"], from: UIApplication.shared.windows.last?.rootViewController) { (result, error) -> Void in
+        completion(result, error)
+    }
+}

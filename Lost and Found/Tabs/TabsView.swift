@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TabsView: View {
     
-    @State var showActionSheet: Bool = false
+    @State private var showModal = false
     
     var body: some View {
         TabView {
@@ -21,9 +21,10 @@ struct TabsView: View {
             }
             ItensView()
                 .tabItem {
-                    Image(systemName: "tray").font(.headline)
+                    Image(systemName: "tray").font(.system(size: 18))
                     Text("Itens")
             }
+            
             AddView(title: "")
                 .tabItem {
                     Image(systemName: "plus.circle").font(.title)
@@ -32,16 +33,17 @@ struct TabsView: View {
             
             MessagesView()
                 .tabItem {
-                    Image(systemName: "message").font(.headline)
+                    Image(systemName: "message").font(.system(size: 18))
                     Text("Messages")
             }
             MoreView()
                 .tabItem {
-                    Image(systemName: "gear").font(.headline)
+                    Image(systemName: "gear").font(.system(size: 18))
                     Text("More")
             }
         }
         .edgesIgnoringSafeArea(.top)
+        .accentColor(Color.defaultColor)
     }
     
     struct TabsView_Previews: PreviewProvider {

@@ -13,19 +13,37 @@ struct AddView: View {
     @State var title: String
     
     var body: some View {
-        Form {
-            Section {
-                TextField("Title", text: $title)
-                HStack {
-                    Image(systemName: "star")
-                    Text("tba son")
+        VStack(alignment: .leading, spacing: 20) {
+            GeometryReader { geometry in
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(0 ..< 5) { item in
+                            CardMini()
+                                .frame(width: geometry.size.width, height: 200)
+                        }
+                    }
                 }
-                HStack {
-                    Image(systemName: "star")
-                    Text("tba son")
-                }
-            }
-        }
+            }.frame(height: 200)
+            
+            TextField("Email", text: $title)
+                .font(.system(size: 14))
+                .padding(12)
+                .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
+            
+            TextField("Email or Username", text: $title)
+                .font(.system(size: 14))
+                .padding(12)
+                .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
+            
+            TextField("Email or Username", text: $title)
+                .font(.system(size: 14))
+                .padding(12)
+                .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color(UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)), lineWidth: 1))
+            
+            Spacer()
+        } .padding(20)
+        
+        
     }
 }
 

@@ -12,7 +12,6 @@ import FirebaseAuth
 struct LoginView: View {
     
     @ObservedObject var keyboardResponder = KeyboardObserver()
-    @EnvironmentObject var session: SessionStore
     
     @State var email: String = ""
     @State var password: String = ""
@@ -25,14 +24,6 @@ struct LoginView: View {
     
     
     func signIn() {
-        session.singIn(email: email, password: password) { (result, error) in
-            if let error = error {
-                self.error = error.localizedDescription
-            } else {
-                self.email = ""
-                self.password = ""
-            }
-        }
     }
     
     var body: some View {
@@ -75,48 +66,13 @@ struct LoginView: View {
                     .padding()
             }
             
-            Text("or")
-                .font(.headline)
-                .fontWeight(.regular)
-                .padding(.bottom)
-            
-            HStack {
-                Button(action: signIn) {
-                    Text("Facebook")
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .frame(height: 50)
-                        .foregroundColor(.white)
-                        .font(.system(size: 14))
-                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
-                        .cornerRadius(10)
-                }
-                Button(action: signIn) {
-                    Text("Google")
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .frame(height: 50)
-                        .foregroundColor(.white)
-                        .font(.system(size: 14))
-                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
-                        .cornerRadius(10)
-                }
-                Button(action: signIn) {
-                    Text("Apple")
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .frame(height: 50)
-                        .foregroundColor(.white)
-                        .font(.system(size: 14))
-                        .background(Color(UIColor(red:1.00, green:0.34, blue:0.13, alpha:1.0)))
-                        .cornerRadius(10)
-                }
-            }
-            
             Spacer()
             
             HStack {
                 Text("I'm a new user.")
                     .font(.headline)
                     .fontWeight(.regular)
-                NavigationLink(destination: MoreView()) {
+                NavigationLink(destination: RegisterView()) {
                     Text("Create an account")
                         .font(.headline)
                         .fontWeight(.regular)
@@ -130,12 +86,15 @@ struct LoginView: View {
         .padding(.top, 50)
         .padding(.bottom, 20)
         .offset(y: -keyboardResponder.currentHeight*0.9)
+            
+            // Navbar modifiers
+            .navigationBarTitle("Back")
     }
-    
 }
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView().environmentObject(SessionStore())
+        LoginView()
     }
 }
