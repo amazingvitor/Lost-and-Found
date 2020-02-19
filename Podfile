@@ -9,7 +9,8 @@ target 'Lost and Found' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'FBSDKLoginKit'
+  pod 'FBSDKCoreKit/Swift'
+  pod 'FBSDKLoginKit/Swift'
   pod 'GoogleSignIn'
 
 end

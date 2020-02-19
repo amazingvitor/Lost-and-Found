@@ -9,6 +9,7 @@
 import SwiftUI
 import GoogleSignIn
 import Firebase
+import FacebookLogin
 
 
 struct LandingView: View {
@@ -72,8 +73,8 @@ struct LandingView: View {
                                 .padding(5)
                             
                             Text("Continue with Google")
-                            .font(.custom("Roboto-Regular", size: 15))
-                            .frame(width: 175, alignment: .leading)
+                                .font(.custom("Roboto-Regular", size: 15))
+                                .frame(width: 175, alignment: .leading)
                             
                         }
                         .frame(minWidth: 0, maxWidth: .infinity)
@@ -85,7 +86,7 @@ struct LandingView: View {
                     }
                     
                     
-                    Button(action: signIn) {
+                    Button(action: attemptLoginFacebook) {
                         HStack {
                             Image("facebookLogo")
                                 .resizable()
@@ -154,6 +155,38 @@ func attemptLoginGoogle() {
     if Auth.auth().currentUser != nil {
     }
 }
+
+func attemptLoginFacebook() {
+    let loginManager = LoginManager()
+    
+    loginManager.logIn(permissions: ["email"], from: UIApplication.shared.windows.last?.rootViewController) { (result, error) in
+        if error != nil {
+            print((error?.localizedDescription)!)
+        } else {
+            print("VOCE NAO E TAO BURRO")
+            
+            // ...
+            if let error = error {
+                print (error.localizedDescription)
+                return
+            }
+            let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+            
+            Auth.auth().signIn(with: credential) { (result, error) in
+                if error != nil {
+                    print((error?.localizedDescription)!)
+                    return
+                } else {
+                    
+                    print((Auth.auth().currentUser)!)
+                }
+            }
+            
+        }
+    }
+}
+
+
 
 
 struct LandingView_Previews: PreviewProvider {

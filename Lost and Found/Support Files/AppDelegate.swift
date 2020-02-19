@@ -9,9 +9,11 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FacebookLogin
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, LoginButtonDelegate{
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
         // Google SignIn
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        
         
         return true
     }
@@ -47,11 +48,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
                 print((error?.localizedDescription)!)
                 return
             } else {
-                print("user = " + (result?.user.email)!)
+                
                 print((Auth.auth().currentUser)!)
             }
         }
     }
+    
+    
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        // ...
+        if let error = error {
+            print (error.localizedDescription)
+            return
+        }
+        let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+
+        Auth.auth().signIn(with: credential) { (result, error) in
+            if error != nil {
+                print((error?.localizedDescription)!)
+                return
+            } else {
+                
+                print((Auth.auth().currentUser)!)
+            }
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        print("LOGOUT")
+    }
+
     
     // MARK: UISceneSession Lifecycle
     
